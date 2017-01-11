@@ -20,6 +20,9 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+  }
 }
 
 dependencies {
@@ -36,4 +39,7 @@ dependencies {
   compile 'com.prolificinteractive:material-calendarview:1.4.2'
 
   compile project(':interface')
+}
+repositories {
+  mavenCentral()
 }
